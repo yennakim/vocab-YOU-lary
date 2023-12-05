@@ -1,0 +1,65 @@
+{
+  "-NksQQPEVsa3aOqu0o4T": {
+    "title": null,
+    "definition": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
+    "category": null,
+    "timestamp": null,
+    "uid": null,
+    "private": true,
+    "firebaseKey": null
+  },
+  "-NksQQPGkY4GDtlzPl7m": {
+    "title": null,
+    "definition": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+    "category": null,
+    "timestamp": null,
+    "uid": null,
+    "private": true,
+    "firebaseKey": null
+  },
+  "-NksQQPIodcCpW3_yAuE": {
+    "title": null,
+    "definition": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
+    "category": null,
+    "timestamp": null,
+    "uid": null,
+    "private": true,
+    "firebaseKey": null
+  },
+  "-NksQQPKefxNC2WQE87n": {
+    "title": null,
+    "definition": "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
+    "category": null,
+    "timestamp": null,
+    "uid": null,
+    "private": false,
+    "firebaseKey": null
+  },
+  "-NksQQPL6ueAAcQvsNHw": {
+    "title": null,
+    "definition": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
+    "category": null,
+    "timestamp": null,
+    "uid": null,
+    "private": false,
+    "firebaseKey": null
+  },
+  "-NksQQPN9s0TqmGQzfu2": {
+    "title": null,
+    "definition": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
+    "category": null,
+    "timestamp": null,
+    "uid": null,
+    "private": false,
+    "firebaseKey": null
+  },
+  "-NksQQPOERC5LC4hxDJQ": {
+    "title": null,
+    "definition": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "category": null,
+    "timestamp": null,
+    "uid": null,
+    "private": true,
+    "firebaseKey": null
+  }
+}
