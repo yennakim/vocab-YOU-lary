@@ -4,7 +4,7 @@ import navigationEvents from '../events/navigationEvents';
 import navBar from '../components/shared/navBar';
 import logoutButton from '../components/logoutButton';
 import { showWords } from '../pages/words';
-import getWords from '../api/wordData';
+import { getWords } from '../api/wordData';
 
 const startApp = () => {
   domBuilder(); // BUILD THE DOM
