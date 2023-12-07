@@ -14,7 +14,7 @@ const navBar = () => {
           <a class="nav-link " href="#" id="all-words">All Words <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Other</a>
+          <button class="nav-link" href="#" id="add-word-btn">Create Entry</button>
         </li>
       </ul>
       <span class="navbar-text">
