@@ -3,7 +3,8 @@ import domBuilder from '../components/shared/domBuilder';
 import navigationEvents from '../events/navigationEvents';
 import navBar from '../components/shared/navBar';
 import logoutButton from '../components/logoutButton';
-// import getWords from '../api/wordData';
+import { showWords } from '../pages/words';
+import getWords from '../api/wordData';
 
 const startApp = () => {
   domBuilder(); // BUILD THE DOM
@@ -13,7 +14,7 @@ const startApp = () => {
   logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
   navigationEvents(); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
 
-//  getWords().then(showBooks);
+  getWords().then(showWords);
 };
 
 export default startApp;
