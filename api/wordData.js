@@ -56,6 +56,19 @@ const deleteWord = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// TODO: GET SINGLE WORD
+const getSingleWord = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/words/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
 export {
-  getWords, createWord, updateWord, deleteWord
+  getWords, createWord, updateWord, deleteWord, getSingleWord
 };
