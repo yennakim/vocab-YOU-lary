@@ -8,15 +8,15 @@ import { getWords } from '../api/wordData';
 import domEvents from '../events/domEvents';
 import formEvents from '../events/formEvents';
 
-const startApp = () => {
+const startApp = (user) => {
   domBuilder(); // BUILD THE DOM
-  domEvents(); // ADD THE EVENT LISTENTERS TO THE DOM
-  formEvents(); // ADD FORM EVENT LISTENTERS TO THE DOM
+  domEvents(user); // ADD THE EVENT LISTENTERS TO THE DOM
+  formEvents(user); // ADD FORM EVENT LISTENTERS TO THE DOM
   navBar(); // DYNAMICALLY ADD THE NAV
   logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
-  navigationEvents(); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
+  navigationEvents(user); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
 
-  getWords().then(showWords);
+  getWords(user.uid).then(showWords);
 };
 
 export default startApp;
