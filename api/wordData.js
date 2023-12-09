@@ -3,15 +3,21 @@ import client from '../utils/client';
 const endpoint = client.databaseURL;
 
 // GET ALL WORDS
-const getWords = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/words.json`, {
+const getWords = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/words.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
     .catch(reject);
 });
 

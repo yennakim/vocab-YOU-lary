@@ -1,7 +1,7 @@
 import { createWord, getWords, updateWord } from '../api/wordData';
 import { showWords } from '../pages/words';
 
-const formEvents = () => {
+const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
     // CLICK EVENT FOR SUBMITTING FORM FOR ADDING A WORD ENTRY
@@ -9,14 +9,16 @@ const formEvents = () => {
       const payload = {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
-        category: document.querySelector('#category').value
+        category: document.querySelector('#category').value,
+        uid: user.uid,
+        timeSubmitted: Date.now()
       };
-
+      console.warn(payload.timeSubmitted);
       createWord(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
 
         updateWord(patchPayload).then(() => {
-          getWords().then(showWords);
+          getWords(user.uid).then(showWords);
         });
       });
     }
@@ -30,7 +32,7 @@ const formEvents = () => {
         firebaseKey
       };
       updateWord(payload).then(() => {
-        getWords().then(showWords);
+        getWords(user.uid).then(showWords);
       });
     }
   });

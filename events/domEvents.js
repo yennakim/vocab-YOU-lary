@@ -2,7 +2,7 @@ import { getWords, deleteWord, getSingleWord } from '../api/wordData';
 import addWordForm from '../components/addWordForm';
 import { showWords } from '../pages/words';
 
-const domEvents = () => {
+const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
   // CLICK EVENT FOR SHOWING FORM FOR ADDING A WORD
     if (e.target.id.includes('add-word-btn')) {
@@ -22,7 +22,7 @@ const domEvents = () => {
         const [, firebaseKey] = (e.target.id.split('--'));
 
         deleteWord(firebaseKey).then(() => {
-          getWords().then(showWords);
+          getWords(user.uid).then(showWords);
         });
       }
     }
