@@ -75,6 +75,38 @@ const getSingleWord = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// FILTER CATEGORY - COFFEE
+const filterCoffee = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/words.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const coffee = Object.values(data).filter((item) => item.category === 'Coffee');
+      resolve(coffee);
+    })
+    .catch(reject);
+});
+
+// FILTER CATEGORY - PASTRY
+const filterPastry = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/words.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const pastry = Object.values(data).filter((item) => item.category === 'Pastry');
+      resolve(pastry);
+    })
+    .catch(reject);
+});
+
 export {
-  getWords, createWord, updateWord, deleteWord, getSingleWord
+  getWords, createWord, updateWord, deleteWord, getSingleWord, filterCoffee, filterPastry
 };
