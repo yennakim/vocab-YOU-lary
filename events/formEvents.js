@@ -1,5 +1,6 @@
 import { createWord, getWords, updateWord } from '../api/wordData';
 import { showWords } from '../pages/words';
+import timestamp from '../utils/timestamp';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -10,10 +11,9 @@ const formEvents = (user) => {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         category: document.querySelector('#category').value,
+        timestamp: timestamp(),
         uid: user.uid,
-        timeSubmitted: Date.now()
       };
-      console.warn(payload.timeSubmitted);
       createWord(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
 

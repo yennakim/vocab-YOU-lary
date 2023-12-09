@@ -14,6 +14,12 @@ const navBar = () => {
           <a class="nav-link " href="#" id="all-words">All Words <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
+        <a class="nav-link " href="#" id="category-coffee">Coffees</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#" id="category-pastry">Pastries</a>
+      </li>
+        <li class="nav-item">
           <button class="nav-link" href="#" id="add-word-btn">Create Entry</button>
         </li>
       </ul>
